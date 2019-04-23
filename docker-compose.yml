@@ -1,0 +1,13 @@
+version: '2'
+services:
+  test-node:
+    image: test-node:latest
+    container_name: test-node
+    networks:
+      mariadb_default:
+        ipv4_address: 172.18.0.3
+
+networks:
+  mariadb_default:
+    external:
+      name: mariadb_default
